@@ -1,0 +1,9 @@
+contrato_numero,codigo,descricao,tipo,marca,modelo,horimetro_inicial,status
+CTR-2025-001,EQ-001,Escavadeira Hidráulica 20t,Escavadeira,Caterpillar,320D,1250,operacional
+CTR-2025-001,EQ-002,Escavadeira Hidráulica 30t,Escavadeira,Komatsu,PC300,3480,operacional
+CTR-2025-001,EQ-003,Motoniveladora 140HP,Motoniveladora,Caterpillar,140K,2150,operacional
+CTR-2025-001,EQ-004,Rolo Compactador Vibratório,Rolo Compactador,Dynapac,CA25,890,operacional
+CTR-2025-001,EQ-005,Caminhão Basculante 14m³,Caminhão,Mercedes-Benz,Actros 2651,45200,operacional
+CTR-2025-001,EQ-006,Trator de Esteiras D6,Trator,Caterpillar,D6T,5640,operacional
+CTR-2025-002,EQ-007,Vibroacabadora de Asfalto,Vibroacabadora,Vogele,Super 1800,1850,operacional
+CTR-2025-002,EQ-008,Rolo Compactador Liso,Rolo Compactador,Bomag,BW211D,720,operacional

@@ -1,0 +1,16 @@
+codigo,descricao,unidade_medida,preco_unitario,categoria,ativa
+AT-001,Escavação e carga de material 1ª categoria,m³,25.50,terraplenagem,true
+AT-002,Escavação e carga de material 2ª categoria,m³,32.80,terraplenagem,true
+AT-003,Escavação e carga de material 3ª categoria,m³,45.20,terraplenagem,true
+AT-004,Transporte de material até 5km - DMT,m³.km,3.50,terraplenagem,true
+AT-005,Espalhamento e compactação de aterro,m³,18.90,terraplenagem,true
+AT-006,Regularização e compactação de subleito,m²,8.75,terraplenagem,true
+AT-007,Escavação de vala para drenagem,m³,28.40,drenagem,true
+AT-008,Fornecimento e assentamento de tubo Ø 400mm,m,125.00,drenagem,true
+AT-009,Fornecimento e assentamento de tubo Ø 600mm,m,185.00,drenagem,true
+AT-010,Caixa coletora 60x60cm,un,450.00,drenagem,true
+AT-011,Imprimação betuminosa,m²,4.20,pavimentacao,true
+AT-012,CBUQ - Camada de ligação (5cm),m²,28.50,pavimentacao,true
+AT-013,CBUQ - Camada de rolamento (4cm),m²,24.80,pavimentacao,true
+AT-014,Pintura de faixa contínua,m,2.50,sinalizacao,true
+AT-015,Placa de sinalização vertical,un,380.00,sinalizacao,true

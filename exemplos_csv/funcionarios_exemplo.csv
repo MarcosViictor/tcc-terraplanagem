@@ -1,0 +1,11 @@
+nome,matricula,funcao,setor,salario_base,ativo
+João da Silva,MAT-001,Operador de Escavadeira,Operação,5500.00,true
+Maria Santos,MAT-002,Encarregada de Campo,Supervisão,8000.00,true
+Pedro Oliveira,MAT-003,Operador de Motoniveladora,Operação,6000.00,true
+Ana Costa,MAT-004,Operadora de Rolo,Operação,5200.00,true
+Carlos Souza,MAT-005,Motorista de Caminhão,Transporte,4800.00,true
+Fernanda Lima,MAT-006,Mestre de Obras,Supervisão,9500.00,true
+Roberto Alves,MAT-007,Mecânico de Equipamentos,Manutenção,6500.00,true
+Juliana Rocha,MAT-008,Topógrafa,Topografia,7200.00,true
+Marcos Pereira,MAT-009,Servente,Serviços Gerais,2800.00,true
+Luciana Dias,MAT-010,Auxiliar Administrativo,Administrativo,3500.00,true

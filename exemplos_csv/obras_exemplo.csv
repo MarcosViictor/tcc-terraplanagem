@@ -1,0 +1,4 @@
+nome,codigo,descricao,data_inicio,data_fim_prevista,endereco,orcamento_total,status
+Duplicação BR-101 - Trecho Norte,OBR-001,Duplicação e adequação da rodovia BR-101,2025-01-15,2025-12-20,"BR-101, KM 120 ao KM 145",8500000.00,em_andamento
+Pavimentação Avenida Central,OBR-002,Pavimentação e drenagem da Av. Central,2025-02-01,2025-08-30,"Avenida Central, Centro",2300000.00,planejamento
+Construção de Viaduto,OBR-003,Construção de viaduto sobre ferrovia,2025-03-10,2026-03-10,"Rua das Flores x Linha Férrea",15000000.00,planejamento

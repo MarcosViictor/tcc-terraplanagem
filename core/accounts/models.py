@@ -11,6 +11,15 @@ class User(AbstractUser):
     ]
     nome = models.CharField(max_length=100)
     papel = models.CharField(max_length=20, choices=PAPEL_CHOICES)
+    perfil = models.ForeignKey(
+        'terraplanagem.Perfil', 
+        on_delete=models.SET_NULL, 
+        null=True, 
+        blank=True,
+        related_name='usuarios'
+    )
+    email = models.EmailField(unique=True)
+    matricula = models.CharField(max_length=20, unique=True, null=True, blank=True)
     ativo = models.BooleanField(default=True)
     criado_em = models.DateTimeField(auto_now_add=True)
     atualizado_em = models.DateTimeField(auto_now=True)
