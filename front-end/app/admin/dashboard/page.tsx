@@ -1,8 +1,9 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { TrendingUp, Users, Truck, AlertTriangle, CheckCircle2, Clock, FileText, Upload, Download } from "lucide-react"
+import { CheckCircle2, Clock, FileText, Upload, Download, AlertTriangle } from "lucide-react"
 import Link from "next/link"
+import { DashboardStats } from "@/components/admin/DashboardStats"
 
 export default function AdminDashboard() {
   return (
@@ -13,7 +14,7 @@ export default function AdminDashboard() {
           <div className="flex items-center justify-between">
             <div>
               <h1 className="text-2xl font-bold">Painel Administrativo</h1>
-              <p className="text-sm text-muted-foreground">Obra: Rodovia BR-116 - Trecho Cariri</p>
+              <p className="text-sm text-muted-foreground">Sistema de Terraplanagem</p>
             </div>
             <Link href="/">
               <Button variant="outline">Sair</Button>
@@ -23,61 +24,9 @@ export default function AdminDashboard() {
       </header>
 
       <div className="container mx-auto px-4 py-6">
-        {/* KPIs */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-          <Card>
-            <CardHeader className="flex flex-row items-center justify-between pb-2">
-              <CardTitle className="text-sm font-medium">Equipamentos Ativos</CardTitle>
-              <Truck className="h-4 w-4 text-muted-foreground" />
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">24</div>
-              <p className="text-xs text-muted-foreground flex items-center gap-1 mt-1">
-                <TrendingUp className="h-3 w-3 text-success" />
-                <span className="text-success">+2</span> desde ontem
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader className="flex flex-row items-center justify-between pb-2">
-              <CardTitle className="text-sm font-medium">Mão de Obra</CardTitle>
-              <Users className="h-4 w-4 text-muted-foreground" />
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">156</div>
-              <p className="text-xs text-muted-foreground flex items-center gap-1 mt-1">
-                <span className="text-muted-foreground">Funcionários presentes hoje</span>
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader className="flex flex-row items-center justify-between pb-2">
-              <CardTitle className="text-sm font-medium">Disponibilidade Mecânica</CardTitle>
-              <CheckCircle2 className="h-4 w-4 text-muted-foreground" />
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">87.5%</div>
-              <p className="text-xs text-muted-foreground flex items-center gap-1 mt-1">
-                <TrendingUp className="h-3 w-3 text-success" />
-                <span className="text-success">+3.2%</span> vs. mês anterior
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader className="flex flex-row items-center justify-between pb-2">
-              <CardTitle className="text-sm font-medium">Alertas Pendentes</CardTitle>
-              <AlertTriangle className="h-4 w-4 text-muted-foreground" />
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold text-warning">7</div>
-              <p className="text-xs text-muted-foreground flex items-center gap-1 mt-1">
-                <span className="text-warning">3 críticos</span> requerem atenção
-              </p>
-            </CardContent>
-          </Card>
+        {/* KPIs Dinâmicos */}
+        <div className="mb-6">
+          <DashboardStats />
         </div>
 
         {/* Tabs de Navegação */}
@@ -184,35 +133,41 @@ export default function AdminDashboard() {
           {/* Cadastros */}
           <TabsContent value="cadastros" className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              <Card className="hover:shadow-md transition-shadow cursor-pointer">
-                <CardHeader>
-                  <CardTitle className="text-lg">Obras</CardTitle>
-                  <CardDescription>Gerenciar cadastro de obras</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Button className="w-full">Acessar</Button>
-                </CardContent>
-              </Card>
+              <Link href="/admin/obras">
+                <Card className="hover:shadow-md transition-shadow cursor-pointer">
+                  <CardHeader>
+                    <CardTitle className="text-lg">Obras</CardTitle>
+                    <CardDescription>Gerenciar cadastro de obras</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <Button className="w-full">Acessar</Button>
+                  </CardContent>
+                </Card>
+              </Link>
 
-              <Card className="hover:shadow-md transition-shadow cursor-pointer">
-                <CardHeader>
-                  <CardTitle className="text-lg">Equipamentos</CardTitle>
-                  <CardDescription>Gerenciar frota de equipamentos</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Button className="w-full">Acessar</Button>
-                </CardContent>
-              </Card>
+              <Link href="/admin/equipamentos">
+                <Card className="hover:shadow-md transition-shadow cursor-pointer">
+                  <CardHeader>
+                    <CardTitle className="text-lg">Equipamentos</CardTitle>
+                    <CardDescription>Gerenciar frota de equipamentos</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <Button className="w-full">Acessar</Button>
+                  </CardContent>
+                </Card>
+              </Link>
 
-              <Card className="hover:shadow-md transition-shadow cursor-pointer">
-                <CardHeader>
-                  <CardTitle className="text-lg">Funcionários</CardTitle>
-                  <CardDescription>Importar e gerenciar equipes</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Button className="w-full">Acessar</Button>
-                </CardContent>
-              </Card>
+              <Link href="/admin/funcionarios">
+                <Card className="hover:shadow-md transition-shadow cursor-pointer">
+                  <CardHeader>
+                    <CardTitle className="text-lg">Funcionários</CardTitle>
+                    <CardDescription>Importar e gerenciar equipes</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <Button className="w-full">Acessar</Button>
+                  </CardContent>
+                </Card>
+              </Link>
 
               <Card className="hover:shadow-md transition-shadow cursor-pointer">
                 <CardHeader>
@@ -224,15 +179,17 @@ export default function AdminDashboard() {
                 </CardContent>
               </Card>
 
-              <Card className="hover:shadow-md transition-shadow cursor-pointer">
-                <CardHeader>
-                  <CardTitle className="text-lg">Critérios de Medição</CardTitle>
-                  <CardDescription>Configurar descontos e regras</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Button className="w-full">Acessar</Button>
-                </CardContent>
-              </Card>
+              <Link href="/admin/importar">
+                <Card className="hover:shadow-md transition-shadow cursor-pointer">
+                  <CardHeader>
+                    <CardTitle className="text-lg">Importar Dados</CardTitle>
+                    <CardDescription>Upload de arquivos CSV</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <Button className="w-full">Acessar</Button>
+                  </CardContent>
+                </Card>
+              </Link>
 
               <Card className="hover:shadow-md transition-shadow cursor-pointer">
                 <CardHeader>

@@ -16,6 +16,13 @@ export default function HomePage() {
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
             Otimize a apropriação de dados em obras de terraplenagem com tecnologia e eficiência
           </p>
+          <div className="mt-6">
+            <Link href="/login">
+              <Button size="lg" className="text-lg px-8">
+                Fazer Login
+              </Button>
+            </Link>
+          </div>
         </div>
 
         {/* Perfis de Acesso */}
